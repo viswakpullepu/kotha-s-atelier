@@ -1303,12 +1303,6 @@ footer {
         display: none;
     }
 
-    #draft {
-        display: none !important;
-    }
-    .nav-links li:has(a[href="#draft"]) {
-        display: none !important;
-    }
 
     /* Scaling typography for mobile */
     .hero-title {
