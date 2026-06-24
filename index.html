@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotha's Atelier | Premium Architecture & Interior Design</title>
+    <meta name="description" content="Kotha's Atelier is a premium, award-winning architecture and interior design firm specializing in luxurious, modern, and timeless spaces.">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="preloader-active">
+
+    <!-- Noise Texture Overlay for premium analog feel -->
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Luxury Cursor -->
+    <div class="custom-cursor-dot" id="cursor-dot"></div>
+    <div class="custom-cursor-ring" id="cursor-ring" data-text=""></div>
+
+    <!-- 3D WebGL Canvas Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Preloader Overlay -->
+    <div class="preloader" id="preloader">
+        <h2 class="preloader-logo">KOTHA'S ATELIER</h2>
+        <div class="preloader-line">
+            <div class="preloader-progress" id="preloader-progress"></div>
+        </div>
+        <div class="preloader-number" id="preloader-number">0%</div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <a href="#home" class="logo hover-action" data-hover-text="Home">KOTHA'S<span>.</span></a>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link active hover-action" data-hover-text="Go">Home</a></li>
+            <li><a href="#about" class="nav-link hover-action" data-hover-text="Story">About</a></li>
+            <li><a href="#portfolio" class="nav-link hover-action" data-hover-text="Works">Portfolio</a></li>
+            <li><a href="#draft" class="nav-link hover-action" data-hover-text="Draft">Draft My House</a></li>
+            <li><a href="#contact" class="nav-link hover-action" data-hover-text="Build">Contact</a></li>
+        </ul>
+
+        <button class="burger hover-action" id="burger" aria-label="Toggle menu" data-hover-text="Menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </button>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- HOME PAGE SECTION -->
+        <section class="page-section active" id="home">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Architecture & Interiors</span>
+                    <h1 class="hero-title">Sculpting Space.<br>Defining <span>Time</span>.</h1>
+                    <p class="hero-description">We synthesize modernist luxury with organic, timeless harmony to construct bespoke architectural marvels and premium interior spaces.</p>
+                    <a href="#portfolio" class="btn btn-primary hover-action" data-hover-text="View">
+                        Explore Portfolio <span class="btn-arrow">&rarr;</span>
+                    </a>
+                </div>
+                <div class="hero-slider-bg">
+                    <img src="assets/hero_modernist_villa.png" alt="Luxurious Modernist Villa at Dusk" class="hero-slider-img">
+                </div>
+            </div>
+
+            <!-- Storytelling philosophy sub-section -->
+            <div class="home-philosophy">
+                <div class="philosophy-text-container">
+                    <span class="section-tag">Philosophy</span>
+                    <h2 class="philosophy-lead">"Spaces should not merely be occupied; they should be experienced."</h2>
+                    <p class="philosophy-body">At Kotha's Atelier, we believe architecture is a dialogue between human emotion, light, and material. Every structure we compose is tailored to amplify quiet luxury, structural integrity, and architectural poetry.</p>
+                    <a href="#about" class="btn hover-action" data-hover-text="Story">Our Full Story &rarr;</a>
+                </div>
+                <div class="philosophy-visual hover-action" data-hover-text="Explore">
+                    <img src="assets/workspace_architect.png" alt="Kotha's Atelier Workspace" class="philosophy-img">
+                </div>
+            </div>
+
+            <!-- Key metrics / stats -->
+            <div class="metrics-section">
+                <div class="metric-card hover-action" data-hover-text="Details">
+                    <span class="metric-num" data-val="12">12</span>
+                    <span class="metric-label">Years of Mastery</span>
+                </div>
+                <div class="metric-card hover-action" data-hover-text="Details">
+                    <span class="metric-num" data-val="180">180</span>
+                    <span class="metric-label">Bespoke Projects</span>
+                </div>
+                <div class="metric-card hover-action" data-hover-text="Details">
+                    <span class="metric-num" data-val="25">25</span>
+                    <span class="metric-label">Design Laurels</span>
+                </div>
+                <div class="metric-card hover-action" data-hover-text="Details">
+                    <span class="metric-num" data-val="100">100</span>
+                    <span class="metric-label">% Custom Craft</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / OUR STORY PAGE SECTION -->
+        <section class="page-section" id="about">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Crafting <span>Prestige</span></h2>
+            </div>
+
+            <div class="about-story">
+                <div class="story-img-wrapper">
+                    <img src="assets/workspace_architect.png" alt="Designing at Kotha's Atelier" class="story-img-main">
+                    <div class="story-img-badge">
+                        <span>EST. 2014<br>&bull;<br>KOTHA'S</span>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <h3>We create environments where structural rigor meets artistic expression.</h3>
+                    <p class="story-paragraph">Founded by visionary architects, Kotha's Atelier represents the pinnacle of residential design, premium workspaces, and grand commercial spaces. Our design language is rooted in spatial harmony, utilizing premium raw materials like poured concrete, polished marble, patinated bronze, and warm structural timber.</p>
+                    <p class="story-paragraph">We curate every detail, from the macro site planning to the micro custom furniture pieces, ensuring our clients receive a cohesive masterpiece that resonates with their distinct lifestyles.</p>
+                    <a href="#contact" class="btn btn-primary hover-action" data-hover-text="Build">Partner With Us</a>
+                </div>
+            </div>
+
+            <!-- Pillars of Kotha's Atelier -->
+            <div class="pillars-section">
+                <div class="section-header">
+                    <span class="section-tag">Core Tenets</span>
+                    <h2 class="section-title">Our Design <span>Pillars</span></h2>
+                </div>
+                <div class="pillars-grid">
+                    <div class="pillar-card hover-action" data-hover-text="Pillar 1">
+                        <span class="pillar-num">01 /</span>
+                        <h3 class="pillar-title">Precision</h3>
+                        <p class="pillar-desc">Engineering and architectural integrity drive our studio. We deliver absolute detailing where geometry holds purpose, ensuring flawless implementation from conceptual drawing to completion.</p>
+                    </div>
+                    <div class="pillar-card hover-action" data-hover-text="Pillar 2">
+                        <span class="pillar-num">02 /</span>
+                        <h3 class="pillar-title">Timelessness</h3>
+                        <p class="pillar-desc">We eschew fleeting aesthetic trends in favor of timeless elegance. We design sanctuaries that age gracefully, developing character and integrity over generations.</p>
+                    </div>
+                    <div class="pillar-card hover-action" data-hover-text="Pillar 3">
+                        <span class="pillar-num">03 /</span>
+                        <h3 class="pillar-title">Sovereignty</h3>
+                        <p class="pillar-desc">Your sanctuary should express your unique story. We co-create luxury spaces that offer an bespoke reflection of personal prestige, privacy, and architectural independence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO PAGE SECTION -->
+        <section class="page-section" id="portfolio">
+            <div class="section-header">
+                <span class="section-tag">Selected Works</span>
+                <h2 class="section-title">Architectural <span>Sanctuaries</span></h2>
+            </div>
+
+            <div class="portfolio-container">
+                <!-- Filtering tabs -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active hover-action" data-filter="all" data-hover-text="Filter">All Projects</button>
+                    <button class="filter-btn hover-action" data-filter="residential" data-hover-text="Filter">Residential</button>
+                    <button class="filter-btn hover-action" data-filter="commercial" data-hover-text="Filter">Commercial</button>
+                    <button class="filter-btn hover-action" data-filter="restoration" data-hover-text="Filter">Restoration</button>
+                </div>
+
+                <!-- Projects grid -->
+                <div class="portfolio-grid" id="portfolio-grid">
+                    
+                    <!-- Project Item 1 -->
+                    <div class="portfolio-item hover-action" data-category="residential" data-hover-text="View" data-project-id="elysian-estate">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-img-container">
+                                <img src="assets/living_room_luxury.png" alt="Elysian Estate Living Room" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Residential</span>
+                                <h3 class="portfolio-item-title">Elysian Estate</h3>
+                                <span class="portfolio-view-project">Examine Space &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 2 -->
+                    <div class="portfolio-item hover-action" data-category="commercial" data-hover-text="View" data-project-id="aura-lobby">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-img-container">
+                                <img src="assets/hotel_lobby_minimalist.png" alt="Aura Hotel Lobby" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Commercial</span>
+                                <h3 class="portfolio-item-title">Aura Hotel Lobby</h3>
+                                <span class="portfolio-view-project">Examine Space &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 3 -->
+                    <div class="portfolio-item hover-action" data-category="restoration" data-hover-text="View" data-project-id="brick-gallery">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-img-container">
+                                <img src="assets/heritage_restoration_gallery.png" alt="The Brick Gallery Art Space" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Restoration</span>
+                                <h3 class="portfolio-item-title">The Brick Gallery</h3>
+                                <span class="portfolio-view-project">Examine Space &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 4 -->
+                    <div class="portfolio-item hover-action" data-category="residential" data-hover-text="View" data-project-id="golden-pavilion">
+                        <div class="portfolio-item-inner">
+                            <div class="portfolio-img-container">
+                                <img src="assets/hero_modernist_villa.png" alt="Golden Hour Pavilion Exterior" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-info">
+                                <span class="portfolio-category">Residential</span>
+                                <h3 class="portfolio-item-title">Golden Hour Pavilion</h3>
+                                <span class="portfolio-view-project">Examine Space &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DRAFT MY HOUSE PAGE SECTION -->
+        <section class="page-section" id="draft">
+            <div class="section-header">
+                <span class="section-tag">3D Sandbox</span>
+                <h2 class="section-title">Draft My <span>House</span></h2>
+            </div>
+
+            <div class="draft-container">
+                <!-- Configurator Panel -->
+                <div class="draft-configurator">
+                    <h3 class="draft-lead">Design Specification Console</h3>
+                    <p class="draft-description">Use the sliders and controls below to adjust the dimensions of your bespoke house model. When complete, click the CTA to attach this configuration to your inquiry form.</p>
+                    
+                    <div class="draft-controls">
+                        <!-- Floor Length Slider -->
+                        <div class="draft-control-group">
+                            <div class="draft-label-row">
+                                <label for="draft-length">House Length</label>
+                                <span class="draft-value-display" id="draft-length-val">12m</span>
+                            </div>
+                            <input type="range" id="draft-length" class="draft-slider hover-action" min="6" max="18" value="12" step="1" data-hover-text="Scale">
+                        </div>
+
+                        <!-- Floor Width Slider -->
+                        <div class="draft-control-group">
+                            <div class="draft-label-row">
+                                <label for="draft-width">House Width</label>
+                                <span class="draft-value-display" id="draft-width-val">10m</span>
+                            </div>
+                            <input type="range" id="draft-width" class="draft-slider hover-action" min="6" max="18" value="10" step="1" data-hover-text="Scale">
+                        </div>
+
+                        <!-- Pillars Count Select -->
+                        <div class="draft-control-group">
+                            <label class="draft-group-label">Pillar Configurations</label>
+                            <div class="draft-pillars-selector">
+                                <button type="button" class="pillar-btn active hover-action" data-pillars="4" data-hover-text="Select">4 Pillars</button>
+                                <button type="button" class="pillar-btn hover-action" data-pillars="6" data-hover-text="Select">6 Pillars</button>
+                                <button type="button" class="pillar-btn hover-action" data-pillars="8" data-hover-text="Select">8 Pillars</button>
+                                <button type="button" class="pillar-btn hover-action" data-pillars="10" data-hover-text="Select">10 Pillars</button>
+                            </div>
+                        </div>
+
+                        <!-- Furniture Layout Toggle -->
+                        <div class="draft-control-group">
+                            <div class="draft-toggle-row">
+                                <div class="draft-toggle-info">
+                                    <label class="draft-toggle-label">Interior Furniture Layout</label>
+                                    <p class="draft-toggle-desc">Place premium modernist sofa and coffee table sets inside the model.</p>
+                                </div>
+                                <label class="draft-switch hover-action" data-hover-text="Toggle">
+                                    <input type="checkbox" id="draft-furniture" checked>
+                                    <span class="draft-slider-toggle"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Draft CTA -->
+                        <button type="button" class="btn btn-primary btn-submit-draft hover-action" id="btn-submit-draft" data-hover-text="Consult">
+                            Consult with this Draft &rarr;
+                        </button>
+
+                    </div>
+                </div>
+                
+                <!-- Guide note -->
+                <div class="draft-visual-guide">
+                    <div class="guide-box">
+                        <i class="fa-solid fa-compass-drafting dynamic-icon"></i>
+                        <p>Interact with the 3D canvas directly by clicking and dragging. Pillars dynamically realign themselves along your custom boundary margins.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE SECTION -->
+        <section class="page-section" id="contact">
+            <div class="section-header">
+                <span class="section-tag">Inquiries</span>
+                <h2 class="section-title">Let's Build <span>Together</span></h2>
+            </div>
+
+            <div class="contact-container">
+                <!-- Info block -->
+                <div class="contact-info-panel">
+                    <div>
+                        <h3 class="contact-lead">Have a landmark vision? Let us translate it into stone, glass, and timber.</h3>
+                        
+                        <ul class="contact-details-list">
+                            <li class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-detail-text">
+                                    <h4>Studio Atelier</h4>
+                                    <p>88 Luxury Arcade, Jubilee Hills, Hyderabad, IN</p>
+                                </div>
+                            </li>
+                            <li class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-detail-text">
+                                    <h4>Electronic Inquiries</h4>
+                                    <p>atelier@kothas.com</p>
+                                </div>
+                            </li>
+                            <li class="contact-detail-item">
+                                <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-detail-text">
+                                    <h4>Direct Communication</h4>
+                                    <p>+91 (040) 2999 8888</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Map graphic mock -->
+                    <div class="contact-map-mock hover-action" data-hover-text="Navigate">
+                        <div class="map-placeholder-bg"></div>
+                        <div class="map-card">
+                            <h4>KOTHA'S ATELIER</h4>
+                            <p>Jubilee Hills, Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form block -->
+                <div class="contact-form-panel">
+                    <form id="contact-form" novalidate>
+                        <div class="form-message" id="form-msg"></div>
+
+                        <!-- Dynamic 3D Draft Badge Attachment -->
+                        <div class="draft-attachment-badge" id="draft-badge" style="display: none;">
+                            <div class="badge-icon"><i class="fa-solid fa-cube"></i></div>
+                            <div class="badge-content">
+                                <span class="badge-title">3D House Model Attached</span>
+                                <span class="badge-details" id="draft-badge-details">Length: 12m | Width: 10m | Pillars: 4</span>
+                            </div>
+                            <button type="button" class="badge-remove hover-action" id="btn-remove-badge" data-hover-text="Remove">&times;</button>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="form-name" class="form-input" placeholder=" " required>
+                            <label for="form-name" class="form-label">Full Name</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="form-email" class="form-input" placeholder=" " required>
+                            <label for="form-email" class="form-label">Email Address</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="form-phone" class="form-input" placeholder=" ">
+                            <label for="form-phone" class="form-label">Phone Number (Optional)</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="form-message" class="form-input" placeholder=" " required></textarea>
+                            <label for="form-message" class="form-label">Project Description & Timeline</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary hover-action" id="form-submit" data-hover-text="Send">
+                            Submit Inquiry &rarr;
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE STUDY / MODAL OVERLAY -->
+        <div class="modal" id="project-modal">
+            <div class="modal-content">
+                <button class="modal-close hover-action" id="modal-close" data-hover-text="Close">&times;</button>
+                <div class="modal-grid">
+                    <div class="modal-img-wrapper">
+                        <img src="" alt="Project Image" class="modal-img" id="modal-img">
+                    </div>
+                    <div class="modal-details">
+                        <span class="modal-category" id="modal-category">Category</span>
+                        <h3 id="modal-title">Project Name</h3>
+                        
+                        <div class="modal-meta-grid">
+                            <div class="modal-meta-item">
+                                <span class="modal-meta-label">Location</span>
+                                <span class="modal-meta-val" id="modal-location">City, Country</span>
+                            </div>
+                            <div class="modal-meta-item">
+                                <span class="modal-meta-label">Completed</span>
+                                <span class="modal-meta-val" id="modal-year">2026</span>
+                            </div>
+                            <div class="modal-meta-item">
+                                <span class="modal-meta-label">Total Area</span>
+                                <span class="modal-meta-val" id="modal-size">800 m&sup2;</span>
+                            </div>
+                            <div class="modal-meta-item">
+                                <span class="modal-meta-label">Client</span>
+                                <span class="modal-meta-val" id="modal-client">Private client</span>
+                            </div>
+                        </div>
+
+                        <p class="modal-desc" id="modal-desc">Detailed project description goes here...</p>
+                        <a href="#contact" class="btn hover-action" id="modal-cta-btn" data-hover-text="Inquire">Inquire About Similar Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <span class="footer-copy">&copy; 2026 Kotha's Atelier. All rights reserved.</span>
+        <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" class="hover-action" data-hover-text="Follow">Instagram</a>
+            <a href="https://pinterest.com" target="_blank" class="hover-action" data-hover-text="Pin">Pinterest</a>
+            <a href="https://linkedin.com" target="_blank" class="hover-action" data-hover-text="Connect">LinkedIn</a>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP (GreenSock Animation Platform) Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- 3D WebGL Background Script -->
+    <script src="canvas3d.js"></script>
+    <!-- Core Application Routing & Cursor Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
