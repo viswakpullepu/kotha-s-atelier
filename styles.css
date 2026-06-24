@@ -250,8 +250,7 @@ p {
     letter-spacing: 3px;
     text-decoration: none;
     color: var(--color-text-light);
-    display: flex;
-    align-items: center;
+    display: inline-block;
 }
 
 .logo span {
@@ -452,13 +451,14 @@ main {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transform: scale(1.1);
+    transform: scale(1.0);
     transition: transform 10s ease;
     opacity: 0.8;
+    z-index: 1;
 }
 
 .hero:hover .hero-slider-img {
-    transform: scale(1.02);
+    transform: scale(1.0);
 }
 
 /* Section Header */
@@ -1188,6 +1188,7 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         padding: 20px 6%;
+        overflow: hidden;
     }
     
     .nav-links {
@@ -1205,10 +1206,12 @@ footer {
         box-shadow: -10px 0 30px rgba(0,0,0,0.5);
         border-left: 1px solid rgba(197, 168, 128, 0.1);
         z-index: 1099;
+        display: none !important;
     }
     
     .nav-links.nav-active {
         transform: translateX(0);
+        display: flex !important;
     }
     
     .burger {
@@ -1229,7 +1232,7 @@ footer {
     }
     
     .hero {
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         height: auto;
         padding-top: 120px;
@@ -1668,13 +1671,7 @@ footer {
     .draft-configurator {
         padding: 30px 20px;
     }
-    /* Hide Sandbox */
-    #draft {
-        display: none !important;
-    }
-    .nav-links a[href="#draft"] {
-        display: none !important;
-    }
+
     /* Responsive typography */
     .hero-title {
         font-size: clamp(2.5rem, 8vw, 3.5rem);
