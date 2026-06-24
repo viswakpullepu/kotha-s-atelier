@@ -1188,7 +1188,6 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         padding: 20px 6%;
-        overflow: hidden;
     }
     
     .nav-links {
