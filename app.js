@@ -212,6 +212,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleRouting() {
         let hash = window.location.hash || "#home";
         if (hash === "#") hash = "#home";
+
+        if (hash === "#draft" && window.innerWidth <= 768) {
+            window.location.hash = "#home";
+            return;
+        }
         
         const targetSection = document.querySelector(hash);
         if (!targetSection) return;
@@ -268,6 +273,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.addEventListener("hashchange", handleRouting);
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth <= 768 && window.location.hash === "#draft") {
+            window.location.hash = "#home";
+        }
+    });
     
     // Initial routing call if hash exists, else default is #home
     if (window.location.hash) {

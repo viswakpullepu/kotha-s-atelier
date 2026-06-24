@@ -647,38 +647,39 @@ test.describe("Kotha's Atelier E2E Test Suite", () => {
     test("T10.5: Scenario 5 - Mobile Responsive Viewport Full Flow", async ({ page }) => {
       // Emulate iPhone X/12 viewport size
       await page.setViewportSize({ width: 375, height: 812 });
+      await waitForAppReady(page);
+      
+      // Verify logo checks: logo is visible and text is checked
+      const logo = page.locator('header.navbar .logo');
+      await expect(logo).toBeVisible();
+      await expect(logo).toHaveText("Kotha's Atelier"); // will fail until R4 is implemented
       
       // Open Mobile Navbar Burger Menu
       await page.click('#burger');
       await expect(page.locator('#nav-links')).toHaveClass(/nav-active/);
       
-      // Click Draft link
-      await page.click('#nav-links a[href="#draft"]');
+      // Navigate to Contact
+      await page.click('#nav-links a[href="#contact"]');
       await page.waitForTimeout(500);
       
       // Burger menu should have auto-closed
       await expect(page.locator('#nav-links')).not.toHaveClass(/nav-active/);
       
-      // Configure Draft in mobile sandbox
-      await page.fill('#draft-length', '8');
-      await page.evaluate(() => document.getElementById('draft-length').dispatchEvent(new Event('input')));
-      await page.fill('#draft-width', '8');
-      await page.evaluate(() => document.getElementById('draft-width').dispatchEvent(new Event('input')));
-      await page.click('.pillar-btn[data-pillars="4"]');
+      // Assert that #draft is indeed hidden/display:none on mobile viewport
+      await expect(page.locator('#draft')).toBeHidden();
       
-      // Redirect to contact
-      await page.click('#btn-submit-draft');
-      await expect(page.locator('#draft-badge')).toBeVisible();
+      // Verify text visibility on Mobile: Check that some key headings are visible
+      await expect(page.locator('.hero-title')).toBeVisible();
       
-      // Submit form
+      // Complete form submission without configuring the sandbox
       await page.fill('#form-name', 'Zaha Hadid');
       await page.fill('#form-email', 'zaha@hadid-architects.com');
+      await page.fill('#form-message', 'Inquiring about responsive structural options.');
       await page.click('#form-submit');
       
       const formMsg = page.locator('#form-msg');
       await expect(formMsg).toBeVisible({ timeout: 5000 });
       await expect(formMsg).toHaveClass(/success/);
-      await expect(page.locator('#draft-badge')).toBeHidden();
     });
   });
 

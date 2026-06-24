@@ -349,11 +349,15 @@
         
         const state = pageStates[targetPage];
 
+        // R2: WebGL Mobile Rewrite - Adjust camera distance for portrait aspect ratios
+        const isMobilePortrait = window.innerWidth < 768 && window.innerWidth < window.innerHeight;
+        const mobileMultiplier = isMobilePortrait ? 1.5 : 1.0;
+
         // Smoothly transition camera positions using GSAP
         gsap.to(camera.position, {
             x: state.camX,
             y: state.camY,
-            z: state.camZ,
+            z: state.camZ * mobileMultiplier,
             duration: 2.0,
             ease: "power2.out"
         });

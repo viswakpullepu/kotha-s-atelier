@@ -1302,6 +1302,60 @@ footer {
     .custom-cursor-dot, .custom-cursor-ring {
         display: none;
     }
+
+    #draft {
+        display: none !important;
+    }
+    .nav-links li:has(a[href="#draft"]) {
+        display: none !important;
+    }
+
+    /* Scaling typography for mobile */
+    .hero-title {
+        font-size: 2.2rem !important;
+    }
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    .story-content h3 {
+        font-size: 1.6rem !important;
+    }
+    .philosophy-lead {
+        font-size: 1.3rem !important;
+    }
+    .metric-num {
+        font-size: 2.2rem !important;
+    }
+    .contact-lead {
+        font-size: 1.3rem !important;
+    }
+    .modal-details h3 {
+        font-size: 1.6rem !important;
+    }
+    .preloader-logo {
+        font-size: 1.8rem !important;
+    }
+    .logo {
+        font-size: 1.2rem !important;
+    }
+
+    /* Layout adjustments for mobile */
+    .portfolio-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .story-img-badge {
+        right: 15px !important;
+        bottom: 15px !important;
+        width: 100px !important;
+        height: 100px !important;
+    }
+    footer {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 20px !important;
+        padding: 30px 6% !important;
+    }
 }
 
 /* DRAFT MY HOUSE STYLES */
@@ -1613,6 +1667,64 @@ footer {
     }
     .draft-configurator {
         padding: 30px 20px;
+    }
+    /* Hide Sandbox */
+    #draft {
+        display: none !important;
+    }
+    .nav-links a[href="#draft"] {
+        display: none !important;
+    }
+    /* Responsive typography */
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+    }
+    .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    .philosophy-lead {
+        font-size: 1.4rem;
+    }
+    .metric-num {
+        font-size: 2.2rem;
+    }
+    /* Responsive layouts */
+    .hero-slider-bg {
+        width: 100%;
+        opacity: 0.3;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+    .home-philosophy {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    body, html {
+        overflow-x: hidden;
+    }
+    main {
+        padding-top: 60px;
+    }
+    .navbar {
+        padding: 20px 5%;
+    }
+    .page-section {
+        padding-bottom: 40px;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 }
 

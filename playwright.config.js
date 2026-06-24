@@ -21,7 +21,7 @@ module.exports = defineConfig({
   webServer: {
     command: 'node tests/server.js',
     url: 'http://localhost:8089',
-    reuseExistingServer: false,
+    reuseExistingServer: true,
     timeout: 10000,
   },
 });
