@@ -639,11 +639,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------------------------------
     const burger = document.getElementById("burger");
     const nav = document.getElementById("nav-links");
+    const navCloseBtn = document.getElementById("nav-close-btn");
 
     burger.addEventListener("click", () => {
         nav.classList.toggle("nav-active");
         burger.classList.toggle("toggle");
     });
+
+    if (navCloseBtn) {
+        navCloseBtn.addEventListener("click", () => {
+            nav.classList.remove("nav-active");
+            burger.classList.remove("toggle");
+        });
+    }
 
     // ----------------------------------------------------
     // 9. LUXURIOUS CONTACT FORM SUBMISSION

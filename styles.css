@@ -1724,4 +1724,19 @@ footer {
     #cursor-dot, #cursor-ring {
         display: none !important;
     }
+    .nav-close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        color: var(--color-gold);
+        font-size: 3rem;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+.nav-close-btn {
+    display: none;
 }
