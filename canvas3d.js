@@ -88,11 +88,16 @@
             // 2. Camera setup
             camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 100);
             camera.position.z = pageStates.home.camZ;
+            if (width < height) {
+                camera.fov = Math.min(Math.max(60 * (height / width) * 0.75, 60), 85);
+                camera.updateProjectionMatrix();
+            }
 
             // 3. Renderer setup
             renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
             renderer.setSize(width, height);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            const maxDPR = (width < 768) ? 1.5 : 2;
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, maxDPR));
             renderer.setClearColor(0x070708, 1);
             container.appendChild(renderer.domElement);
 
@@ -117,6 +122,7 @@
             // 8. Event listeners
             window.addEventListener("resize", onWindowResize);
             window.addEventListener("mousemove", onMouseMove);
+            window.addEventListener("touchmove", onTouchMove, { passive: true });
             window.addEventListener("page-changed", onPageChanged);
             window.addEventListener("draft-changed", onDraftChanged);
 
@@ -341,6 +347,12 @@
         targetMouse.y = -(e.clientY / height) * 2 + 1;
     }
 
+    function onTouchMove(e) {
+        if (!isInitialized || !e.touches || e.touches.length === 0) return;
+        targetMouse.x = (e.touches[0].clientX / width) * 2 - 1;
+        targetMouse.y = -(e.touches[0].clientY / height) * 2 + 1;
+    }
+
     function onPageChanged(e) {
         if (!isInitialized) return;
         const targetPage = e.detail.page;
@@ -558,6 +570,11 @@
         height = window.innerHeight;
 
         camera.aspect = width / height;
+        if (width < height) {
+            camera.fov = Math.min(Math.max(60 * (height / width) * 0.75, 60), 85);
+        } else {
+            camera.fov = 60;
+        }
         camera.updateProjectionMatrix();
 
         renderer.setSize(width, height);

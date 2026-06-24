@@ -1723,5 +1723,7 @@ footer {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+    #cursor-dot, #cursor-ring {
+        display: none !important;
+    }
 }
-
