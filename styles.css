@@ -1796,3 +1796,12 @@ footer {
 .nav-close-btn {
     display: none;
 }
+
+/* Hide Vercel Toolbar Injection */
+vercel-live-feedback,
+vercel-toolbar,
+#vercel-toolbar {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
