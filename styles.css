@@ -1653,10 +1653,67 @@ footer {
     color: var(--color-gold);
 }
 
-/* RESPONSIVE DESIGN - DRAFT */
+/* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
     .draft-container {
         gap: 40px;
+    }
+    .home-philosophy, .about-story {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .philosophy-img, .story-img-main {
+        height: 400px;
+    }
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .nav-links {
+        gap: 25px;
+    }
+    .navbar {
+        padding: 20px 5%;
+    }
+    .hero-slider-bg {
+        width: 100%;
+        opacity: 0.4;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+    .hero-content {
+        background: rgba(7, 7, 8, 0.5);
+        padding: 30px;
+        border-radius: 8px;
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 0.75rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .metrics-section {
+        grid-template-columns: 1fr;
+    }
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.7rem;
+    }
+    .philosophy-img, .story-img-main {
+        height: 300px;
+    }
+    .draft-configurator {
+        padding: 20px 15px;
     }
 }
 
