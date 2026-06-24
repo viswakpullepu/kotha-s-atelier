@@ -325,14 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 duration: 0.8,
                 ease: "power3.out"
             });
-            gsap.from(".pillar-card", {
-                y: 40,
-                opacity: 0,
-                stagger: 0.2,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2
-            });
+
         } else if (hash === "#portfolio") {
             gsap.from(".portfolio-item", {
                 y: 50,
