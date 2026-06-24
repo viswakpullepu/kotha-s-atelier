@@ -1198,20 +1198,22 @@ footer {
         height: 100vh;
         width: 70%;
         background-color: var(--bg-secondary);
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transform: translateX(100%);
-        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        visibility: hidden;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.5s;
         box-shadow: -10px 0 30px rgba(0,0,0,0.5);
         border-left: 1px solid rgba(197, 168, 128, 0.1);
         z-index: 1099;
-        display: none !important;
     }
     
     .nav-links.nav-active {
+        visibility: visible;
         transform: translateX(0);
-        display: flex !important;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
     }
     
     .burger {
